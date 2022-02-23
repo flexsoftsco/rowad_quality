@@ -1,0 +1,232 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2022-02-23 13:22:42.551781",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sop_sb",
+  "sop",
+  "sop_description",
+  "section_break_4",
+  "naming_series",
+  "request_date",
+  "employee",
+  "employee_name",
+  "department",
+  "requirement_sb",
+  "deviation",
+  "non_conformance",
+  "risk_assessment",
+  "issue_sb",
+  "critical",
+  "major",
+  "minor",
+  "reason",
+  "root_cause",
+  "responsible_department",
+  "departmental_feedback",
+  "action_taken",
+  "description_of_action_taken",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "sop_sb",
+   "fieldtype": "Section Break",
+   "label": "SOP"
+  },
+  {
+   "fieldname": "sop",
+   "fieldtype": "Link",
+   "label": "SOP",
+   "options": "SOP"
+  },
+  {
+   "fieldname": "sop_description",
+   "fieldtype": "Text Editor",
+   "label": "SOP Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "QISR.#",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "QISR.#",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "requirement_sb",
+   "fieldtype": "Section Break",
+   "label": "Requirement"
+  },
+  {
+   "default": "0",
+   "fieldname": "deviation",
+   "fieldtype": "Check",
+   "label": "Deviation"
+  },
+  {
+   "default": "0",
+   "fieldname": "non_conformance",
+   "fieldtype": "Check",
+   "label": "Non Conformance"
+  },
+  {
+   "default": "0",
+   "fieldname": "risk_assessment",
+   "fieldtype": "Check",
+   "label": "Risk Assessment"
+  },
+  {
+   "fieldname": "issue_sb",
+   "fieldtype": "Section Break",
+   "label": "Issue Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "critical",
+   "fieldtype": "Check",
+   "label": "Critical"
+  },
+  {
+   "default": "0",
+   "fieldname": "major",
+   "fieldtype": "Check",
+   "label": "Major"
+  },
+  {
+   "default": "0",
+   "fieldname": "minor",
+   "fieldtype": "Check",
+   "label": "Minor"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "root_cause",
+   "fieldtype": "Small Text",
+   "label": "Root Cause"
+  },
+  {
+   "fieldname": "responsible_department",
+   "fieldtype": "Link",
+   "label": "Responsible Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "departmental_feedback",
+   "fieldtype": "Table",
+   "label": "Departmental Feedback",
+   "options": "Quality Issue Departments"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Action Taken",
+   "options": "\nCorrective Action\nPreventive Action"
+  },
+  {
+   "fieldname": "description_of_action_taken",
+   "fieldtype": "Small Text",
+   "label": "Description of Action Taken"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Closed\nOpen"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Quality Issues Request",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2022-02-23 13:22:42.551781",
+ "modified_by": "Administrator",
+ "module": "Rowad Quality",
+ "name": "Quality Issues Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee,department",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

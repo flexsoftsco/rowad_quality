@@ -1,0 +1,147 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2022-02-23 12:51:39.194726",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sop_sb",
+  "sop",
+  "sop_description",
+  "section_break_4",
+  "naming_series",
+  "request_date",
+  "employee",
+  "employee_name",
+  "department",
+  "reason",
+  "request_title",
+  "affected_document",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "collapsible": 1,
+   "fieldname": "sop_sb",
+   "fieldtype": "Section Break",
+   "label": "SOP"
+  },
+  {
+   "fieldname": "sop",
+   "fieldtype": "Link",
+   "label": "SOP",
+   "options": "SOP"
+  },
+  {
+   "fieldname": "sop_description",
+   "fieldtype": "Text Editor",
+   "label": "SOP Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "CCR.#",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "CCR.#",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "request_title",
+   "fieldtype": "Small Text",
+   "label": "Request Title"
+  },
+  {
+   "fieldname": "affected_document",
+   "fieldtype": "Link",
+   "label": "Affected Document",
+   "options": "SOP"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Change Control Request",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2022-02-23 13:23:01.390914",
+ "modified_by": "Administrator",
+ "module": "Rowad Quality",
+ "name": "Change Control Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee,department",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
