@@ -7,7 +7,7 @@ def get_data():
 		{
 			"module_name": "Rowad Quality",
 			"color": "green",
-			"icon": "octicon octicon-code-square",
+			"icon": "octicon octicon-beaker",
 			"type": "module",
 			"label": _("Rowad Quality")
 		}
