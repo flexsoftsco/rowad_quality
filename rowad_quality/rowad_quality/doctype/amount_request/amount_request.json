@@ -11,10 +11,13 @@
   "section_break_4",
   "naming_series",
   "request_date",
+  "total_amount",
+  "cb_1",
   "employee",
   "employee_name",
   "department",
-  "request_description",
+  "ard_sb",
+  "amount_request_detail",
   "amended_from"
  ],
  "fields": [
@@ -77,11 +80,6 @@
    "options": "Department"
   },
   {
-   "fieldname": "request_description",
-   "fieldtype": "Small Text",
-   "label": "Request Description"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -89,10 +87,31 @@
    "options": "Amount Request",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "ard_sb",
+   "fieldtype": "Section Break",
+   "label": "Amount Request Details"
+  },
+  {
+   "fieldname": "amount_request_detail",
+   "fieldtype": "Table",
+   "label": "Amount Request Detail",
+   "options": "Amount Request Detail CT"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
   }
  ],
  "is_submittable": 1,
- "modified": "2022-02-23 12:52:19.216516",
+ "modified": "2022-03-28 14:34:01.631605",
  "modified_by": "Administrator",
  "module": "Rowad Quality",
  "name": "Amount Request",
