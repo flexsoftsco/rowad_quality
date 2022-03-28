@@ -13,19 +13,9 @@ def get_data():
                 },
                 {
                     "type": "doctype",
-                    "name": "Change Control Request",
-                    "label": _("Change Control Request")
-                },
-                {
-                    "type": "doctype",
-                    "name": "Quality Issues Request",
-                    "label": _("Quality Issues Request")
-                },
-                {
-                    "type": "doctype",
-                    "name": "Amount Request",
-                    "label": _("Amount Request")
-                }                                                
+                    "name": "Leave Application",
+                    "label": _("Leave Application")
+                }     
             ]
         },
         {'label': _('Transaction'), 
@@ -42,9 +32,20 @@ def get_data():
                 } ,
                 {
                     "type": "doctype",
-                    "name": "Leave Application",
-                    "label": _("Leave Application")
-                }                                
+                    "name": "Amount Request",
+                    "label": _("Amount Request")
+                } ,
+                {
+                    "type": "doctype",
+                    "name": "Quality Issues Request",
+                    "label": _("Quality Issues Request")
+                }, 
+                {
+                    "type": "doctype",
+                    "name": "Change Control Request",
+                    "label": _("Change Control Request")
+                }                                             
+                               
             ]
         }        
     ]
