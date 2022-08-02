@@ -11,7 +11,9 @@
   "section_break_4",
   "naming_series",
   "request_date",
+  "party_balance",
   "total_amount",
+  "balance_after_request",
   "cb_1",
   "employee",
   "employee_name",
@@ -102,16 +104,28 @@
   {
    "fieldname": "total_amount",
    "fieldtype": "Currency",
-   "label": "Total Amount",
+   "label": "Total Amount Requested",
    "read_only": 1
   },
   {
    "fieldname": "cb_1",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party_balance",
+   "fieldtype": "Currency",
+   "label": "Party Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_after_request",
+   "fieldtype": "Currency",
+   "label": "Balance After Request",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2022-03-28 14:34:01.631605",
+ "modified": "2022-08-02 11:30:53.629393",
  "modified_by": "Administrator",
  "module": "Rowad Quality",
  "name": "Amount Request",
