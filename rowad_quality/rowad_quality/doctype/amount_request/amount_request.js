@@ -2,6 +2,20 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Amount Request', {
+	refresh: function (frm) {
+		if (frm.doc.docstatus == 1) {
+			frm.add_custom_button(__('View Accounting Ledger'), function () {
+				frappe.route_options = {
+					from_date:frm.doc.request_date,
+					to_date:frm.doc.request_date,
+					voucher_no: frm.doc.name,
+					company: frm.doc.company,
+					group_by_voucher: false
+				};
+				frappe.set_route("query-report", "General Ledger");
+			});
+		}
+	},
 	employee: function (frm) {
 
 		frappe.db.get_value('Company',

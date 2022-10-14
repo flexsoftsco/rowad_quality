@@ -4,9 +4,9 @@
 
 from __future__ import unicode_literals
 import frappe
-from frappe.model.document import Document
+from erpnext.controllers.accounts_controller import AccountsController
 
-class AmountRequest(Document):
+class AmountRequest(AccountsController):
 	def validate(self):
 		total_amount=0
 		for amount_request in self.amount_request_detail:
