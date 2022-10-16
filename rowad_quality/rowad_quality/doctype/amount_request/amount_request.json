@@ -130,11 +130,12 @@
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2022-10-14 20:41:57.857704",
+ "modified": "2022-10-16 20:10:56.615785",
  "modified_by": "Administrator",
  "module": "Rowad Quality",
  "name": "Amount Request",
